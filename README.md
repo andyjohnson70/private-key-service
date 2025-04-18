@@ -70,7 +70,7 @@ Verify response: 200 OK
 This confirms that the payload was signed by the corresponding private key and is owned by the holding script.
 
 ## How It Works
-1. The holder script requests a nonce from /nonce.
+1. The holder script requests a nonce from GET /nonce.
 
 2. It creates a message like message:nonce, signs it with a private key, and base64 encodes the signature.
 
