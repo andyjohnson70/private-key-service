@@ -19,8 +19,8 @@ async fn main() {
         .with_state(nonces);
     
     let listener = tokio::net::TcpListener::bind("localhost:7878").await.unwrap();
+    println!("Now listening on http://localhost:7878...");
     axum::serve(listener, app).await.unwrap();
-    println!("Now listening...");
 }
 
 #[axum::debug_handler]
