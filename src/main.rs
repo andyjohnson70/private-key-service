@@ -48,8 +48,8 @@ async fn verify_signature(
     let public_key = RsaPublicKey::from_public_key_pem(&public_key_pem).map_err(|_| StatusCode::BAD_REQUEST).unwrap();
 
     let signature_bytes = general_purpose::STANDARD.decode(&payload.signature).map_err(|_| StatusCode::BAD_REQUEST).unwrap();
-    
-    let hash = Sha256::digest(payload.message);
+    let full_message = format!("{}:{}", payload.message, payload.nonce);
+    let hash = Sha256::digest(full_message);
     let padding = Pkcs1v15Sign::new::<Sha256>();
 
     if public_key.verify(padding, &hash, &signature_bytes).is_ok() {

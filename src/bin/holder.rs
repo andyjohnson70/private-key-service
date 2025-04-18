@@ -19,7 +19,8 @@ fn main() {
     let priv_key = RsaPrivateKey::from_pkcs8_pem(&priv_key_pem).unwrap();
     
     let message = "hello world";
-    let hash = Sha256::digest(message);
+    let full_message = format!("{}:{}", message, nonce);
+    let hash = Sha256::digest(full_message);
     let padding = Pkcs1v15Sign::new::<Sha256>();
     let mut rng = thread_rng();
     let signature = priv_key.sign_with_rng(&mut rng, padding, &hash).unwrap();
