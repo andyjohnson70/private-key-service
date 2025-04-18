@@ -1,0 +1,1 @@
+fn({type error}, Json<SignedPayload>) -> impl Future<Output = ()> {verify_signature}: Handler<_, _>

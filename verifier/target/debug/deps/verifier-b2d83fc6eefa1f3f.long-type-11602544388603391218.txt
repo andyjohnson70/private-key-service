@@ -1,0 +1,1 @@
+fn(State<{type error}>) -> impl Future<Output = Json<NonceResponse>> {generate_nonce}: Handler<_, _>

@@ -1,0 +1,2 @@
+fn(State<Arc<tokio::sync::Mutex<HashSet<String>>>>, axum::Json<SignedPayload>) -> impl Future<Output = Result<StatusCode, StatusCode>> {verify_signature}
+fn(State<Arc<tokio::sync::Mutex<HashSet<String>>>>, axum::Json<SignedPayload>) -> impl Future<Output = Result<StatusCode, StatusCode>> {verify_signature}: Handler<_, _>

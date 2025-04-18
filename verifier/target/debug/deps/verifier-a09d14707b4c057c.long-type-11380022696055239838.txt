@@ -1,0 +1,2 @@
+fn(State<{type error}>, axum::Json<SignedPayload>) -> impl Future<Output = Result<StatusCode, StatusCode>> {verify_signature}
+fn(State<{type error}>, axum::Json<SignedPayload>) -> impl Future<Output = Result<StatusCode, StatusCode>> {verify_signature}: Handler<_, _>
