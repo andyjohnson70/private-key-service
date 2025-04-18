@@ -85,8 +85,8 @@ This confirms that the payload was signed by the corresponding private key and i
 ```
 The verifier:
 
-Validates that the nonce is unused
+1. Validates that the nonce is unused
 
-Verifies the signature using public_key.pem
+2. Verifies the signature using public_key.pem
 
-Returns 200 OK if valid, or 401 Unauthorized if not
+3. Returns 200 OK if valid, or 401 Unauthorized if not
