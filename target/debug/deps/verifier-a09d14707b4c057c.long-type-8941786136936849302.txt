@@ -1,2 +1,0 @@
-fn() -> impl Future<Output = Result<axum::Json<NonceResponse>, {type error}>> {generate_nonce}
-fn() -> impl Future<Output = Result<axum::Json<NonceResponse>, {type error}>> {generate_nonce}: Handler<_, _>

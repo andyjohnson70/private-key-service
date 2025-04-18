@@ -1,1 +1,0 @@
-fn() -> impl Future<Output = Result<Json<NonceResponse>, StatusCode>> {generate_nonce}: Handler<_, _>

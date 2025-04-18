@@ -1,2 +1,0 @@
-fn(State<Arc<tokio::sync::Mutex<HashSet<String>>>>) -> impl Future<Output = axum::Json<NonceResponse>> {generate_nonce}
-fn(State<Arc<tokio::sync::Mutex<HashSet<String>>>>) -> impl Future<Output = axum::Json<NonceResponse>> {generate_nonce}: Handler<_, _>

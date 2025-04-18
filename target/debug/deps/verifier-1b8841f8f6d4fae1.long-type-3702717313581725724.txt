@@ -1,1 +1,0 @@
-fn({type error}, axum::Json<SignedPayload>) -> impl Future<Output = ()> {verify_signature}: Handler<_, _>

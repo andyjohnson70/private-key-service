@@ -1,2 +1,0 @@
-fn(State<Arc<tokio::sync::Mutex<HashSet<String>>>>, Json<SignedPayload>) -> impl Future<Output = ()> {verify_signature}
-fn(State<Arc<tokio::sync::Mutex<HashSet<String>>>>, Json<SignedPayload>) -> impl Future<Output = ()> {verify_signature}: Handler<_, _>
