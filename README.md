@@ -48,7 +48,7 @@ cargo run --bin verifier
 You should see:
 
 ```
-Listening on https://localhost/7878...
+Listening on http://localhost/7878...
 ```
 
 ---
